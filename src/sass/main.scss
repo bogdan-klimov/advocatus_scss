@@ -1,0 +1,12 @@
+@import 'normalize/normalize';
+
+@import 'base/basic';
+
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/home';
+
+@import 'utils/variables';
+@import 'utils/mixins';
