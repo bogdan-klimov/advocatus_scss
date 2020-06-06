@@ -1,5 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    counter-reset: list;
+}
+
 .header {
-    padding: 15px;
+    padding: 25px 0;
+
+    @media (min-width: 850px) {
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 h1 {
@@ -39,117 +54,21 @@ ul {
     flex-wrap: wrap;
     text-align: center;
     &-item {
-        padding: 5px 10px;
-    }
-    &-item:hover {
-        border-bottom: 3px solid #e8bf5d;
-    }
-}
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 45px;
+            color: #111111;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 10px;
+            &:hover {
+                border-bottom: 3px solid #e8bf5d;
+            }
+        } 
 
-.first-section {
-    padding: 300px 0 100px;
-    background: {
-        image: url(../img/hero-img.png);
-        position: top;
-        repeat: no-repeat;
-        size: cover;
-    }
-    .container {
-        max-width: 970px;
-    }
-}
 
-.container {
-    padding: 0 20px;
-    max-width: 1170px;
-    margin: 0 auto;
-}
-
-.personal {
-    padding-left: 20px;
-    border-left: 2px solid #e8bf5d;
-    max-width: 280px;
-    &-name {
-        margin: 0;
-        font-size: 30px;
-        letter-spacing: 3px;
-        line-height: 45px;
-        color: #ffffff;
-        font-family: "Playfair Display";
-        font-weight: 400;
-        .personal-small {
-            font-size: 20px;
-        }
-    }
-}
-
-.button {
-    border-radius: 20px;
-    background-color: #e8bf5d;
-    display: block;
-    max-width: 100px;
-    padding: 10px 45px;
-    letter-spacing: 1px;
-    line-height: 31px;
-    font: {
-        family: "Playfair Display", sans-serif;
-        weight: 400;
-        size: 16px;
-    }
-    color: #111111;
-    cursor: pointer;
-    margin: 30px 0;
-}
-
-.about-us {
-    padding: 50px 0 40px;
-    h2 {
-        font-size: 31px;
-        letter-spacing: 1px;
-        line-height: 45px;
-        color: #111111;
-        font-family: "Playfair Display", sans-serif;
-        font-weight: 400;
-    }
-}
-
-.abouts-us-block {
-    padding-left:   20px;
-    border-left: 3px solid #e8bf5d;
-    max-width: 765px;
-    position: relative;
-}
-
-.about-us-number {
-    display: block;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-    position: absolute;
-    font-size: 194px;
-    letter-spacing: 8px;
-    color: #111111;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-}
-
-.about-us-description {
-    font-size: 21px;
-    letter-spacing: 1px;
-    line-height: 31px;
-    color: #666666;
-    font-family: "Playfair Display";
-    font-weight: 400;    
-}
-
-@media (min-width: 850px) {
-    header {
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .navigation {
-            justify-self: center;
-        }
     }
 }
