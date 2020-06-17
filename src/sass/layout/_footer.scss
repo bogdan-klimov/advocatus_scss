@@ -1,0 +1,25 @@
+.footer {
+    padding: 30px 0;
+    background-color: #111111;
+    .container {
+        max-width: 1100px;
+        display: flex;
+        justify-content: space-between; 
+    } 
+    span {
+        font-size: 16px;
+        line-height: 45px;
+        color: #b5b5b5;
+        font-family: "Playfair Display";
+        font-weight: 300;
+    }
+}
+
+.footer-description-white {
+    font-weight: 800;
+}  
+
+.other-contact {
+    display: flex;
+    align-self: center;
+}
