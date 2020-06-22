@@ -27,13 +27,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
  
-.icon-pinterest-circled:before { content: '\e800'; } /* '' */
-.icon-share:before { content: '\e801'; } /* '' */
-.icon-plus:before { content: '\e802'; } /* '' */
-.icon-minus:before { content: '\e803'; } /* '' */
-.icon-commenting:before { content: '\f27a'; } /* '' */
-.icon-twitter-circled:before { content: '\f30a'; } /* '' */
-.icon-facebook:before { content: '\f30c'; } /* '' */
-.icon-facebook-circled:before { content: '\f30d'; } /* '' */
-.icon-gplus:before { content: '\f30f'; } /* '' */
-.icon-instagram:before { content: '\f32d'; } /* '' */
+.icon-pinterest-circled:before { 
+  content: '\e800'; 
+} 
+.icon-share:before { 
+  content: '\e801'; 
+  color: #000000;
+  margin-left: 5px;
+} 
+.icon-plus:before { 
+  content: '\e802';
+  color: #ffffff;
+}
+.icon-minus:before { 
+  content: '\e803';
+}
+.icon-commenting:before { 
+  content: '\f27a'; 
+  color: #000000;
+  margin-left: 5px;
+}
+.icon-twitter-circled:before { 
+  content: '\f30a'; 
+  color: #ffffff;
+  cursor: pointer;
+} 
+.icon-facebook:before { 
+  content: '\f30c'; 
+  color: #ffffff;
+  cursor: pointer;
+} 
+.icon-facebook-circled:before { 
+  content: '\f30d'; 
+} 
+.icon-gplus:before { 
+  color: #ffffff;
+  content: '\f30f'; 
+  cursor: pointer;
+} 
+.icon-instagram:before { 
+  content: '\f32d'; 
+  color: #ffffff;
+  cursor: pointer;
+} 
+
+.icon-plus {
+  align-self: center; 
+}

@@ -46,9 +46,8 @@ body {
 
 .container {
     padding: 0 20px;
-    max-width: 1170px;
+    max-width: 1070px;
     margin: 0 auto;
-    position: relative;
 }
 
 .personal {
@@ -89,7 +88,16 @@ body {
 
 .about-us {
     counter-reset: list;
-    padding: 40px 0 30px;
+    padding-bottom: 30px;
+
+    &-content {
+        position: relative;
+        height: 223px;
+        display: flex;
+        align-items: center;
+    }
+    
+
     h2 {
         font-size: 31px;
         letter-spacing: 1px;
@@ -114,11 +122,11 @@ body {
     counter-increment: list;
     content: "0" counter(list);
     display: block;
-    bottom: 58%;
-    left: 2%;
+    top: 0;
+    bottom: 0;
     opacity: 0.1;
     position: absolute;
-    font-size: 194px;
+    font-size: 12.125em;
     letter-spacing: 8px;
     color: #111111;
     font-family: "Open Sans", sans-serif;
@@ -252,6 +260,15 @@ body {
     }
 }
 
+.pictus-area-content, .our-attorney-content,
+.our-clients-content, .publication-content, 
+.questions-content, .contact-content{
+    position: relative;
+    height: 223px;
+    display: flex;
+    align-items: center;
+}
+
 .pictus-area {
     @media (min-width: 1200px) {
         padding: 100px 0;
@@ -259,6 +276,7 @@ body {
     padding: 50px 0;
     background-color: #111111;
     .pictus-area-block {
+        align-items: center;
         .pictus-area-description {
             font-size: 21px;
             letter-spacing: 1px;
@@ -303,19 +321,23 @@ body {
             color: #ffffff;
             font-family: "Open Sans", sans-serif;
             font-weight: 400;
-            max-width: 370px;
+            @media (min-width: 850px) {
+                max-width: 370px;
+            }
         }
     }
 }
 
-.meet-our {
+.our-attorney {
     padding: 40px 0;
     @media (min-width: 1200px) {
         padding: 100px 0;
     }
     &-block {
         margin: 0 auto;
-        display: table;
+        @media (min-width: 650px) {
+            columns: 2;
+        }
         @media (min-width: 1200px) {
             display: flex;
             justify-content: space-between;
@@ -347,7 +369,11 @@ body {
         font-weight: 400;
     }
     &-item {
-        padding: 20px 0;
+        padding: 0 20px;
+        &-content {
+            margin: 0 auto;
+            max-width: 269px;
+        }
     }
 } 
 
@@ -380,19 +406,30 @@ body {
         display: flex;
         margin-top: 30px;
         justify-content: center;
+        max-width: 60px;
+        margin: 0 auto;
+        height: 20px;
+        align-items: center;
         &-item {
-            padding: 0 2px;
+            width: 20px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
         &-item-circle {
             width: 10px;
             height: 10px;
             border: 1px solid #ffffff;
             border-radius: 50%;
+            transition: .5s;
         }
         &-item-circle:hover {
             width: 15px;
             height: 15px;
             background-color: #ffffff;
+            transition: .5s;
         }
     }
     &-block {
@@ -425,14 +462,25 @@ body {
             display: flex;
             justify-content: center;
         }
+
         &-comment::before {
-            quotes: "\201c";
+            content: "\201c";
+            font-size: 96px;
+            letter-spacing: 4px;
+            opacity: 0.2;
+            margin-top: -25px;
+            color: #ffffff;
+            font-family: "Playfair Display", sans-serif;
+            font-weight: 400;
         }
+
         &-comment {
             margin-top: 40px;
+            display: flex;
             @media (min-width: 1200px) {
                 max-width: 600px;
                 margin: 0;
+                display: block;
             }    
         }
     }
@@ -443,6 +491,8 @@ body {
         color: #ffffff;
         font-family: "Open Sans", sans-serif;
         font-weight: 400;
+        display: flex;
+        max-width: 500px;
     }
     .our-clients-name {
         margin: 20px auto 0;
@@ -466,8 +516,15 @@ body {
     }    
 }
 
+.slider {
+    margin: 0 auto;
+}
+
 .publication {
-    padding: 60px 0 0;
+    padding: 60px 0 70px;
+    .container {
+        max-width: 1270px;
+    }
     h2 {
         font-size: 31px;
         letter-spacing: 1px;
@@ -510,12 +567,14 @@ body {
             line-height: 31px;
             color: #111111;
             font-family: "Font Awesome", sans-serif;
+            display: flex;
         }
         .share {
             font-size: 16px;
             letter-spacing: 1px;
             line-height: 31px;
             font-weight: 600;
+            display: flex;
             color: #111111;
             font-family: "Font Awesome", sans-serif;
         }
@@ -530,13 +589,14 @@ body {
         }
         &-item {
             max-width: 367px;
-            margin: 0 auto;
-            padding: 0 0 70px;
+            margin: 30px auto;
+            padding-bottom: 10px;
             @media (min-width: 1250px) {
-                margin: 0 15px;
+                margin: 0 25px;
             }
+            border-bottom: 3px solid #e8bf5d;
         }
-        margin-top: 50px;
+        margin-top: 30px;
         .publication-title-block {
             display: flex;
             justify-content: space-between;
@@ -591,6 +651,9 @@ body {
             border-bottom: 2px solid #e8bf5d;
             padding: 10px 0;
         }
+        &-item:hover span {
+            color: #e8bf5d;
+        }
         span {
             font-size: 14px;
             letter-spacing: 1px;
@@ -600,7 +663,8 @@ body {
             font-weight: 700;
         }
         @media (min-width: 1200px) {
-            max-width: 520px;
+            max-width: 580px;
+            width: 100%;
         }
     }
     .privilege-description {
@@ -662,6 +726,7 @@ body {
             .find-us-img {
                 margin: 0 auto;
                 display: block;
+                width: 100%;
             }
         }
         .registration {
@@ -684,7 +749,7 @@ body {
                 button {
                     border: none;
                     max-width: 170px;
-                    margin: 0 auto;
+                    // margin: 0 auto;
                     padding: 10px 20px;
                     border-radius: 20px;
                     font-size: 16px;
@@ -703,8 +768,15 @@ body {
                 }
             }
             @media (min-width: 900px) {
-                max-width: 750px;
+                max-width: 400px;
+                width: 100%;
+                margin-top: 35px;
             }
         }
     }
+}
+
+.publication-img, .publication-img-2,
+.publication-img-3, .our-client {
+    width: 100%;
 }

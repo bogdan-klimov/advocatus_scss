@@ -23,6 +23,12 @@ gulp.task('scripts', () => {
       .pipe(browserSync.stream());
 });
 
+gulp.task('fonts', () => {
+  return gulp.src('./src/font/**')
+      .pipe(gulp.dest('./assets/font/'))
+      .pipe(browserSync.stream());
+});
+
 gulp.task('del', () => {
   return del(['./assets/*']);
 });
@@ -45,8 +51,9 @@ gulp.task('watch', () => {
   gulp.watch('./src/img/**', gulp.series('img-compress'));
   gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));        // в каких файлах будут отслеживаться изменения
   gulp.watch('./src/js/**/*.js', gulp.series('scripts'));
+  gulp.watch('./src/font/**', gulp.series('fonts'));
   gulp.watch('./*.html').on('change', browserSync.reload);
 
 });
 
-gulp.task('default', gulp.series('del', gulp.parallel('styles', 'scripts', 'img-compress'), 'watch'));
+gulp.task('default', gulp.series('del', gulp.parallel('styles', 'scripts', 'img-compress', 'fonts'), 'watch'));
